@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Ray Wu</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="slick/slick.css">
+<link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+   html,
+   body,
+   h1,
+   h2 {
+      font-family: "Roboto", sans-serif;
+   }
+
+   body {
+      background-color: #d1d1d1
+   }
+</style>
+
+<body>
+   <!-- Navbar -->
+   <div class="w3-bar w3-theme">
+      <a href="home.html" class="w3-bar-item w3-button">Logo</a>
+      <a href="experience.html" class="w3-bar-item w3-button">Experiences</a>
+      <div class="w3-dropdown-hover">
+         <button href="projects.html" class="w3-button">
+            Projects <i class="fa fa-caret-down"></i>
+         </button>
+         <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+            <a href="projects.html" class="w3-bar-item w3-button">Personal Projects</a>
+            <a href="projects.html#academic" class="w3-bar-item w3-button">Academic Projects</a>
+         </div>
+      </div>
+      <a href="resume.html" class="w3-bar-item w3-button">Resume</a>
+      <a href="contact.html" class="w3-bar-item w3-button">Contact</a>
+   </div>
+   <!-- Main Content -->
+   <div class="w3-main" style="margin-left:32px">
+      <div class="w3-row w3-padding-64">
+         <div class="w3-half w3-container">
+            <h2 class="w3-center">Sudoku Image Recognition Solver</h2>
+            <div class="slideContainer">
+               <div class="w3-center slide">
+                  <div>
+                     <img src="Project Pictures/Sudoku solver/8.PNG">
+                  </div>
+                  <div>
+                     <img src="Project Pictures/Sudoku solver/1.jpg">
+                  </div>
+                  <div>
+                     <img src="Project Pictures/Sudoku solver/2.jpg">
+                  </div>
+                  <div>
+                     <img src="Project Pictures/Sudoku solver/4.jpg">
+                  </div>
+                  <div>
+                     <img src="Project Pictures/Sudoku solver/5.jpg">
+                  </div>
+                  <div>
+                     <img src="Project Pictures/Sudoku solver/7.PNG">
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="w3-half w3-container">
+            <div class="w3-padding-64">
+               <h5 class="description">This project uses OpenCV to read an image of a sudoku puzzle, locate the puzzle,
+                  recognize the numbers, and finally solve the puzzle. This project was motivated by a desire to learn
+                  more about computer vision and how to work with OpenCV. It served as a prelude to a lane following RC
+                  car project in the future.</h5>
+               <h5 class="description">The image is first smoothened, then converted to black and white via the
+                  threshold function. It is
+                  assumed that puzzle’s bounding box is the largest continuous contour in the image. Thus, by finding
+                  the largest contour and then warping the contour to a square, the image containing nothing but the
+                  puzzle is obtained. A random forest classifier that was trained on 100 other puzzles is then used to
+                  recognize the numbers in the puzzle. And finally, the puzzle is solved by recursively inserting
+                  numbers
+                  into the blank cells and testing if the solution is valid.</h5>
+            </div>
+         </div>
+      </div>
+      <div class="w3-row w3-padding-64">
+         <div class="w3-half w3-container">
+            <h2 class="w3-center">Ergonomic Split Keyboard</h2>
+            <div class="slideContainer">
+               <div class="w3-center slide">
+                  <div>
+                     <img src="Project Pictures/Ergo keyboard/12.jpg">
+                  </div>
+                  <div>
+                     <img src="Project Pictures/Ergo keyboard/2.jpg">
+                  </div>
+                  <div>
+                     <img src="Project Pictures/Ergo keyboard/3.jpg">
+                  </div>
+                  <div>
+                     <img src="Project Pictures/Ergo keyboard/7.jpg">
+                  </div>
+                  <div>
+                     <img src="Project Pictures/Ergo keyboard/8.jpg">
+                  </div>
+                  <div>
+                     <img src="Project Pictures/Ergo keyboard/11.jpg">
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="w3-half w3-container" id="academic">
+            <div class="w3-padding-64">
+               <h5 class="description">Inspired by other hobbyist designs, this keyboard project utilized skills across
+                  multiple disciplines. The split design allowed for the user to place each half wherever they liked,
+                  and
+                  the ortholinear placement allows for less distance between keys compared to traditional layouts. It
+                  was
+                  also done as an exercise to go through the process of starting with an idea and bringing it to a
+                  functioning prototype.</h5>
+               <h5 class="description">The design was drawn up in Fusion360, then exported to dxf file. The files were
+                  sent
+                  to several local laser cutting company for quotes, and one of them was selected. The switches
+                  themselves
+                  were chosen for their light weight and smooth linear force.</h5>
+               <h5 class="description">The controller for each half of the keyboard is a Sparkfun Pro Micro flashed with
+                  modified community supported QMK firmware. Each Pro Micro had just enough pinout to drive each half of
+                  the keyboard matrix. Communication between each half is done through serial with an aux cable
+                  connecting
+                  the two halves. The aux cable also provide power to the slave half. This means only one half of the
+                  keyboard have to be connected to the computer. The firmware is programmed such that whichever side
+                  connected to the PC is the master half and reads input from the slave half when it detects the other
+                  board via the serial port.</h5>
+            </div>
+         </div>
+      </div>
+      <div class="w3-row w3-padding-64">
+         <div class="w3-half w3-container">
+            <h2 class="w3-center">IoT Pipeline Simulation</h2>
+            <div class="slideContainer">
+               <div class="w3-center slide">
+                  <div>
+                     <img src="Project Pictures/IoT/1.PNG">
+                  </div>
+                  <div>
+                     <img src="Project Pictures/IoT/2.PNG">
+                  </div>
+                  <div>
+                     <img src="Project Pictures/IoT/3.PNG">
+                  </div>
+                  <div>
+                     <img src="Project Pictures/IoT/4.jpg">
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="w3-half w3-container">
+            <div class="w3-padding-64">
+               <h5 class="description">This project was done as part of Microprocessor course. The goal of the project
+                  was
+                  to design and develop an Internet-of-Things system composed of multiple embedded devices with
+                  cloud-enabled services.</h5>
+               <h5 class="description">The system contains four units: STM32F4 Discovery board, STM32F401RE Nucleo board
+                  with an IDB04A1 BLE daughter board, BLE-supported smartphone running Android 6.0, and Amazon S3 with
+                  Lambda. Each unit is able to transmit and receive data, and is connected with other modules via UART,
+                  BLE, or the Internet.</h5>
+               <h5 class="description">The STM32F4 Discovery board samples orientation data from the onboard
+                  accelerometer.
+                  The raw data is transmitted to Nucleo daughter board via UART connection. The daughter enables the
+                  board
+                  to connect with other devices via Bluetooth Low Energy (BLE). The bundled device acts as a transceiver
+                  that receives accelerometer readings from the Discovery board and transmits them to the phone over
+                  BLE.
+               </h5>
+               <h5 class="description">After the smartphone obtains data from the Bluetooth transceiver, it saves the
+                  data
+                  in the phone’s external storage. From the Android app, the user is able to select the saved data file
+                  and
+                  upload it to an AWS S3 bucket.</h5>
+               <h5 class="description">When a new file is uploaded to the bucket, a Lambda function is triggered to
+                  perform
+                  FIR filtering on the raw data, calculate pitch and roll of each entry, and save the processed data to
+                  a
+                  new file in the bucket. From the Android app, the user is able to selected the processed data file and
+                  download it to the phone.</h5>
+               <h5 class="description">Next, the Android app sends the processed data back to the BLE transceiver, which
+                  then transmits it back to the Discovery board, following the same interfaces. Finally, the Discovery
+                  board convert the digital values to an analog voltage using DAC and the analog signal is measured on
+                  an
+                  oscilloscope for visualization.</h5>
+            </div>
+         </div>
+      </div>
+      <div class="w3-row w3-padding-64">
+         <div class="w3-half w3-container">
+            <h2 class="w3-center">VHDL Mastermind Board Game</h2>
+            <div class="slideContainer">
+               <div class="w3-center slide">
+                  <div>
+                     <img src="Project Pictures/VHDL Mastermind board game/1.png">
+                  </div>
+                  <div>
+                     <img src="Project Pictures/VHDL Mastermind board game/2.png">
+                  </div>
+                  <div>
+                     <img src="Project Pictures/VHDL Mastermind board game/3.png">
+                  </div>
+                  <div>
+                     <img src="Project Pictures/VHDL Mastermind board game/4.png">
+                  </div>
+                  <div>
+                     <img src="Project Pictures/VHDL Mastermind board game/5.png">
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="w3-half w3-container">
+            <div class="w3-padding-64">
+               <h5 class="description">This project aims to implement a Mastermind Game system on the Altera DE1 fpga
+                  board. The implemented system has two modes: user guessing mode and system guessing mode. In user
+                  guessing mode, the hidden pattern is generated randomly by the system. The user enters guesses that
+                  will be loaded into the system. The system computes the score of the guess, and displays it on the
+                  7-segment LEDs on the board. In system guessing mode, the user chooses a four-peg combination for the
+                  system to guess. The system displays its current guess, and the user will provide a score for that
+                  guess. Then the system generates a new guess based on the feedback score. The procedure cycles until
+                  the system gets the exactly correct pattern.</h5>
+               <h5 class="description">Both the user guess mode and the system guess mode were tested on the board and
+                  in ModelSim. The results were correct as expected. The guess pins get updated after the scores being
+                  provided by the user. The system gets the correct answer at the fourth guess. During the guessing
+                  process, there are fewer valid guesses, with only one remaining at the end</h5>
+            </div>
+         </div>
+      </div>
+      <div class="w3-row w3-padding-64">
+         <div class="w3-half w3-container">
+            <h2 class="w3-center">Music Note Recognizer</h2>
+            <div class="slideContainer">
+               <div class="w3-center slide">
+                  <div>
+                     <img src="Project Pictures/Music chord recognizer/1.png">
+                  </div>
+                  <div>
+                     <img src="Project Pictures/Music chord recognizer/2.png">
+                  </div>
+                  <div>
+                     <img src="Project Pictures/Music chord recognizer/3.png">
+                  </div>
+                  <div>
+                     <img src="Project Pictures/Music chord recognizer/4.png">
+                  </div>
+                  <div>
+                     <img src="Project Pictures/Music chord recognizer/5.png">
+                  </div>
+                  <div>
+                     <img src="Project Pictures/Music chord recognizer/6.jpg">
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="w3-half w3-container">
+            <div class="w3-padding-64">
+               <h5 class="description">The goal of this project was to use LabVIEW to develop a neural network running
+                  on a National Instrument myRIO board, capable of recognizing the distance between two notes. A neuron
+                  was designed and copies of it were connected into a three-layer neural network. This network then went
+                  through training with back propagation to improve the accuracy of the results.</h5>
+               <h5 class="description">The neural network has two inputs for each of the notes, and 12 outputs for the
+                  distance between the two notes. Each neuron started out with random weights. The weights were adjusted
+                  through training and back propagation. LabVIEW’s built in TestStand was used to train the network. By
+                  feeding in different notes and results and letting the weights back- propagate, the model could learn
+                  all the inputs. The weights of each neuron could be loaded and saved to a text file, thus preserving
+                  the training. </h5>
+            </div>
+         </div>
+      </div>
+      <div class="w3-row w3-padding-64">
+         <div class="w3-half w3-container">
+            <h2 class="w3-center">LEGO Autonomous Robot</h2>
+            <div class="slideContainer">
+               <div class="w3-center slide">
+                  <div>
+                     <img src="Project Pictures/LEGO autonomous robot/1.jpg">
+                  </div>
+                  <div>
+                     <img src="Project Pictures/LEGO autonomous robot/2.png">
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="w3-half w3-container">
+            <div class="w3-padding-64">
+               <h5 class="description">Using Java, programmed a LEGO Mindstorm robot to navigate, localize, and position
+                  correct in a given map. The goal of the robot is to be able to locate itself if it is put anywhere in
+                  a map, navigate itself to the pick up area on the map, pick up a foam block, and drop it off at the
+                  drop off area. All the while correcting its position using regularly spaced markings on the ground.
+               </h5>
+            </div>
+         </div>
+      </div>
+      <div class="w3-row w3-padding-64">
+         <div class="w3-half w3-container">
+            <h2 class="w3-center">Electromyography Armband</h2>
+            <div class="slideContainer">
+               <div class="w3-center slide">
+                  <div>
+                     <img src="Project Pictures/Electromyography armband/1.jpg">
+                  </div>
+                  <div>
+                     <img src="Project Pictures/Electromyography armband/5.png">
+                  </div>
+                  <div>
+                     <img src="Project Pictures/Electromyography armband/2.png">
+                  </div>
+                  <div>
+                     <img src="Project Pictures/Electromyography armband/3.jpg">
+                  </div>
+                  <div>
+                     <img src="Project Pictures/Electromyography armband/4.png">
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="w3-half w3-container">
+            <div class="w3-padding-64">
+               <h5 class="description">Using all analog components, we constructed an armband capable of measuring a
+                  user’s muscle activity using electromyographic techniques. The signal can be modulated to a certain
+                  frequency and sent to a phone to be recorded. Multiple muscle groups can each be modulated to a
+                  different frequency and thus the amount of muscle activity of an area of interest can be recorded.
+                  Combined with motion tracking we can more accurately capture the user’s motion and force. This can
+                  have VR applications, where the user’s force exertion in a motion can have modifier in the VR
+                  environment. Another application can be for physical therapy, recording a user’s activity before and
+                  after an injury can let physicians accurately see how the user is exerting force and using their
+                  muscles.</h5>
+            </div>
+         </div>
+      </div>
+   </div>
+   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+   <script type="text/javascript" src="slick/slick.min.js"></script>
+   <script>
+      $('.slide').slick({
+         dots: true,
+         mobileFirst: true,
+      });
+   </script>
+   <style>
+      .slideContainer div {
+         text-align: center;
+      }
+
+      .slideContainer img {
+         margin: auto;
+      }
+
+      .slick-prev {
+         left: calc(1vw);
+         filter: invert(1);
+         z-index: 1000;
+      }
+
+      .slick-next {
+         right: calc(1vw);
+         filter: invert(1);
+      }
+
+      h5.description {
+         padding-right: 4em;
+      }
+   </style>
+</body>
+
+</html>

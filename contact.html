@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Ray Wu</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+   html,
+   body,
+   h1,
+   h2 {
+      font-family: "Roboto", sans-serif;
+   }
+
+   body {
+      background-color: #d1d1d1
+   }
+</style>
+
+<body>
+   <!-- Navbar -->
+   <div class="w3-bar w3-theme">
+      <a href="home.html" class="w3-bar-item w3-button">Logo</a>
+      <a href="experience.html" class="w3-bar-item w3-button">Experiences</a>
+      <div class="w3-dropdown-hover">
+         <button href="projects.html" class="w3-button">
+            Projects <i class="fa fa-caret-down"></i>
+         </button>
+         <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+            <a href="projects.html" class="w3-bar-item w3-button">Personal Projects</a>
+            <a href="projects.html#academic" class="w3-bar-item w3-button">Academic Projects</a>
+         </div>
+      </div>
+      <a href="resume.html" class="w3-bar-item w3-button">Resume</a>
+      <a href="contact.html" class="w3-bar-item w3-button">Contact</a>
+   </div>
+   <!-- Main Content -->
+   <div class="w3-container">
+      <div class="w3-center">
+         <div class="w3-padding-64">
+            <h1>Get in touch</h1>
+            <p>Feel free to reach out to me if you have any projects or opportunities you think I would be a good fit
+               for</p>
+            <div class="w3-container w3-padding-32">
+               <form method="post" action="http://raywu.ca/formmail.php" name="myform">
+                  <input type="hidden" name="env_report"
+                     value="REMOTE_HOST,REMOTE_ADDR,HTTP_USER_AGENT,AUTH_TYPE,REMOTE_USER">
+                  <input type="hidden" name="recipients" value="me">
+                  <input type="hidden" name="good_url" value="http://raywu.ca/thanks.html">
+                  <input type="hidden" name="bad_url" value="http://raywu.ca/error.html">
+                  <input type="text" id="name" name="FullName" placeholder="Name">
+                  <input type="text" id="email" name="EmailAddr" placeholder="Email">
+                  <textarea type="text" id="message" name="mesg" placeholder="Message"
+                     style="height:200px"></textarea>
+                  <div>
+                     <input type="submit" value="Submit">
+                  </div>
+               </form>
+            </div>
+            <div class="icon">
+               <a href="mailto:raywu2478@gmail.com" target="_blank">
+                  <img src="email.png" alt="Email" style="width:100%">
+               </a>
+            </div>
+            <div class="icon">
+               <a href="https://www.linkedin.com/in/ray-wu-23294593/" target="_blank">
+                  <img src="linkedin.png" alt="LinkedIn" style="width:100%">
+               </a>
+            </div>
+            <div class="icon">
+               <a href="https://github.com/raywu2478" target="_blank">
+                  <img src="github.png" alt="GitHub" style="width:100%">
+               </a>
+            </div>
+         </div>
+      </div>
+   </div>
+</body>
+<style>
+   .icon {
+      display: inline-block;
+      margin-left: auto;
+      margin-right: auto;
+      height: 30px;
+      width: 3vw;
+      min-width: 50px;
+      max-width: 100px;
+   }
+
+   #images {
+      text-align: center;
+   }
+
+   input[type=text],
+   select,
+   textarea {
+      width: 50%;
+      min-width: 200px;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+   }
+
+   input[type=submit] {
+      background-color: black;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+   }
+
+   input[type=submit]:hover {
+      background-color: #d1d1d1;
+      color: black;
+      border-color: black;
+      border: 1px solid black;
+      margin: -1px;
+   }
+</style>
+
+</html>
