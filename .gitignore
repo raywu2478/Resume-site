@@ -18,3 +18,4 @@ formmail.php
 formmail.ini
 FileZilla*
 .vscode/*
+*.code-workspace
